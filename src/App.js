@@ -10,7 +10,7 @@ import { Area, Bar, Calendar, ColorMapping, ColorPicker, Customers, Ecommerce, E
 import { useStateContext } from './contexts/ContextProvider'
 
 const App = () => {
-	const { activeMenu } = useStateContext();
+	const { activeMenu, ThemeSettings } = useStateContext();
 
 	return (
 		<div>
@@ -40,6 +40,8 @@ const App = () => {
 					
 
 					<div>
+						{ThemeSettings && <ThemeSettings />}
+
 						<Routes >
 							{/* Dashboard */}
 							<Route path="/" element={<Ecommerce />} />
